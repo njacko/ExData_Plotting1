@@ -1,5 +1,19 @@
 ## Introduction
 
+Coursera Exploratory Data Analysis Project 1
+
+Four scripts each read in a dataset and create a plot.
+
+## Instructions
+
+1. The scripts require the 'dplyr' and 'lubridate' packages.
+2. The dataset must be extracted to the working directory. It is available here https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+3. The scripts must also be in the working directory.
+4. The scripts can be run by 'source('plot1.R')' etc.
+5. To speed up the process the range of rows to be read in has been hardcoded.
+
+## Information about the dataset
+
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
@@ -32,12 +46,3 @@ web site</a>:
 <li><b>Sub_metering_2</b>: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light. </li>
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
-
-## Instructions
-
-1. The scripts require the 'dplyr' and 'lubridate' packages.
-2. The dataset must be extracted to the working directory. 
-3. The scripts must also be in the working directory.
-4. The scripts can be run by 'Source('plot1.R')' etc.
-5. Please be patient as there is a lot of data to be read in.
-
