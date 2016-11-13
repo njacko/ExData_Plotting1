@@ -1,4 +1,4 @@
-# plot3.R
+# plot4.R
 # Coursera Exploratory Data Analysis Project 1
 # Nicholas Jackson 2016
 # https://github.com/njacko/ExData_Plotting1
@@ -67,12 +67,39 @@ d <- mutate(d, weekday = wday(Date, label = TRUE));
 # -------------------------------------------------------------
 #
 
+# open png file
+png(file = "plot4.png", width = 480, height = 480, units = "px");
+
+# we will plot 4 plots in 2 rows and 2 columns
+par(mfrow = c(2,2));
+
+# plot 1
+# -----------------------------------------------------------------------------
+# set up labelling
+xname = "";
+yname = "Global Active Power";
+
+# set up empty plot
+plot(d$Time, d$Global_active_power, type = "n", xlab = xname, ylab = yname);
+# plot the lines
+lines(d$Time, d$Global_active_power);
+
+# plot 2
+# -----------------------------------------------------------------------------
+# set up labelling
+xname = "datetime";
+yname = "Voltage";
+
+# set up empty plot
+plot(d$Time, d$Voltage, type = "n", xlab = xname, ylab = yname);
+# plot the lines
+lines(d$Time, d$Voltage);
+
+# plot 3
+# -----------------------------------------------------------------------------
 # set up labelling
 xname = "";
 yname = "Energy sub metering";
-
-# open png file
-png(file = "plot3.png", width = 480, height = 480, units = "px");
 
 # set up empty plot
 plot(d$Time, d$Sub_metering_1, type = "n", xlab = xname, ylab = yname);
@@ -85,8 +112,21 @@ lines(d$Time, d$Sub_metering_3, col = "blue");
 # set up the legend
 legend("topright", 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       lwd = 1, col = c("black", "red", "blue"));
+       lwd = 1, col = c("black", "red", "blue"), bty = "n");
 
+
+# plot 4
+# -----------------------------------------------------------------------------
+# set up labelling
+xname = "datetime";
+yname = "Global_reactive_power";
+
+# set up empty plot
+plot(d$Time, d$Global_reactive_power, type = "n", xlab = xname, ylab = yname);
+# plot the lines
+lines(d$Time, d$Global_reactive_power);
+
+# -----------------------------------------------------------------------------
 # close device
 dev.off()
 
